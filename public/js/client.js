@@ -1,4 +1,4 @@
-const socket = io('http://localhost : 8000');
+const socket = io();
 
 const form = document.getElementById('send-container');
 const messageInput = document.getElementById('messageInp')
@@ -6,6 +6,11 @@ const messageContainer = document.querySelector(".container")
 var audio = new Audio('ting.mp3');
 
 console.log(form);
+
+document.getElementById('sendBtn').addEventListener("click", (e) => {
+    e.preventDefault();
+    console.log(e)
+})
 
 const append = (message, position) => {
     const messageElement = document.createE1ement('div');
