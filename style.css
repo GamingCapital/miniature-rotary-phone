@@ -1,0 +1,70 @@
+
+        body {
+            background:url("images/world.jpg") no-repeat center;
+            background-size: cover;
+            min-height:100%;
+        }
+
+        h3{
+            color:white;
+        }
+        .message{
+            background-color : grey;
+            width: 24%;
+            padding: 10px;
+            margin: 17px 12px ;
+            border: 2px solid Oblack;
+            border-radius: 10px;
+            
+        }
+        #send-container{
+            display: block;
+            margin: auto;
+            text-align: center;
+            width: 10%;
+            border-radius: 10px;
+            padding-left: 10px;
+            font-size: 20px;
+            border-radius: 5px;
+        }
+
+        #messageInp{
+            width: 92%;
+            border: 2px solid black;
+            border-radius: 6px;
+            text-align: center;
+            height: 34px;
+            
+        }
+        .btn{
+            cursor: pointer;
+            border: 2px solid Oblack;
+            border-radius: 6px;
+            height : 34px;
+        }
+        .left{
+            width: max-content;
+            
+            border-radius: 20px;
+            padding-bottom: 50px;
+            height: 3px;
+            float: left;
+            clear: both;
+        }
+        .right{
+            float: right;
+            clear: both;
+            width: max-content;
+            border-radius: 20px;
+            padding-bottom: 50px;
+            height: 3px;
+            box-align:right ;
+        }
+        .container{
+            border:10px;
+            overflow-y:auto;
+            height: 84vh;
+            margin-bottom: 33px;
+            max-width: 955px;
+        }
+    
