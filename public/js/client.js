@@ -5,15 +5,8 @@ const messageInput = document.getElementById('messageInp')
 const messageContainer = document.querySelector(".container")
 var audio = new Audio('ting.mp3');
 
-console.log(form);
-
-document.getElementById('sendBtn').addEventListener("click", (e) => {
-    e.preventDefault();
-    console.log(e)
-})
-
 const append = (message, position) => {
-    const messageElement = document.createE1ement('div');
+    const messageElement = document.createElement('div');
     messageElement.innerText = message;
     messageElement.classList.add('message');
     messageElement.classList.add(position);
@@ -25,12 +18,14 @@ const append = (message, position) => {
 
 form.addEventListener('submit', (e) => {
     e.preventDefault();
-    const message = messagelnput.value;
+    const message = messageInput.value;
     append(`You: ${message}`, 'right');
     socket.emit('send', message);
-    messagelnput.value = ''
+    messageInput.value = ''
 })
+
 const name = prompt("Enter your name to join");
+
 socket.emit('new-user-joined', name);
 socket.on('user-joined', name => {
     append(`${name} joined the chat`, 'right')
